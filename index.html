@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>Nadia Puspita - Creative Developer</title>
+    <title>Nadia's Y2K Portal 💫</title>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
@@ -14,95 +14,124 @@
         }
         
         body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Comic Sans MS', 'Arial Black', sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
+            color: #00ff00;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0080);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Animated Background */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
         }
         
         /* Navigation */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(90deg, #ff00ff, #00ffff);
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 4px solid #00ff00;
+            border-bottom: 8px dashed #ffff00;
+            box-shadow: 0 0 20px #ff00ff;
         }
         
         .logo {
-            font-size: 1.5em;
-            font-weight: 800;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2em;
+            font-weight: 900;
+            color: #ffff00;
+            text-shadow: 3px 3px 0px #ff00ff, 6px 6px 0px #00ffff;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
         nav a {
-            margin-left: 40px;
+            margin-left: 30px;
             text-decoration: none;
-            color: #666;
-            font-weight: 500;
-            font-size: 0.95em;
-            transition: color 0.3s ease;
+            color: #000;
+            font-weight: 900;
+            font-size: 1em;
+            background: #ffff00;
+            padding: 8px 16px;
+            border: 2px solid #000;
+            transform: skew(-20deg);
+            transition: all 0.3s;
+            box-shadow: 4px 4px 0px #ff00ff;
         }
         
         nav a:hover {
-            color: #667eea;
+            transform: skew(-20deg) scale(1.1);
+            background: #00ffff;
+            box-shadow: 6px 6px 0px #ff00ff;
         }
         
         /* Hero Section */
         .hero {
-            margin-top: 80px;
-            min-height: 600px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             padding: 60px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 800px;
-            height: 800px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            border: 4px solid #00ff00;
+            border-radius: 20px;
+            margin: 30px;
+            box-shadow: 0 0 30px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.2);
         }
         
         .hero h1 {
             font-size: 4em;
-            font-weight: 900;
+            color: #ffff00;
+            text-shadow: 4px 4px 0px #ff00ff, 8px 8px 0px #00ffff;
             margin-bottom: 20px;
-            line-height: 1.1;
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
         }
         
         .hero p {
-            font-size: 1.3em;
+            font-size: 1.5em;
+            color: #00ffff;
+            text-shadow: 2px 2px 0px #ff00ff;
             margin-bottom: 30px;
-            opacity: 0.95;
-            font-weight: 300;
         }
         
         .hero-buttons {
@@ -112,279 +141,290 @@
             flex-wrap: wrap;
         }
         
-        .btn {
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid white;
+        .btn-y2k {
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: 900;
+            font-family: 'Comic Sans MS', sans-serif;
+            border: 3px solid #000;
+            background: #ffff00;
+            color: #000;
+            transform: skew(-15deg) rotate(-2deg);
+            transition: all 0.3s;
+            box-shadow: 6px 6px 0px #ff00ff;
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1em;
         }
         
-        .btn-primary {
-            background: white;
-            color: #667eea;
-            border-color: white;
+        .btn-y2k:hover {
+            transform: skew(-15deg) rotate(-2deg) scale(1.15);
+            box-shadow: 10px 10px 0px #ff00ff;
         }
         
-        .btn-primary:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
+        .btn-y2k.alt {
+            background: #00ffff;
+            box-shadow: 6px 6px 0px #ff00ff;
         }
         
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border-color: white;
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        /* Main Content */
+        /* Main Container */
         main {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         
+        /* Calculator Panel */
+        .calculator-panel {
+            background: linear-gradient(135deg, #ff00ff, #ff0080);
+            border: 5px solid #ffff00;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 30px #ff00ff, inset 0 0 20px rgba(0, 255, 0, 0.1);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .calc-title {
+            color: #ffff00;
+            text-shadow: 2px 2px 0px #000;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .calc-display {
+            background: #000;
+            color: #00ff00;
+            border: 3px solid #00ff00;
+            padding: 15px;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 10px #00ff00;
+            min-height: 60px;
+            box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.3);
+        }
+        
+        .calc-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .calc-btn {
+            background: #00ffff;
+            color: #000;
+            border: 3px solid #000;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: 900;
+            cursor: pointer;
+            transform: skew(-10deg);
+            transition: all 0.2s;
+            box-shadow: 3px 3px 0px #ff00ff;
+            font-family: 'Comic Sans MS', sans-serif;
+        }
+        
+        .calc-btn:hover {
+            background: #ffff00;
+            transform: skew(-10deg) scale(1.1);
+            box-shadow: 5px 5px 0px #ff00ff;
+        }
+        
+        .calc-btn.operator {
+            background: #ffff00;
+            color: #ff00ff;
+        }
+        
+        .calc-btn.equals {
+            background: #00ff00;
+            color: #ff00ff;
+            grid-column: span 2;
+        }
+        
+        .calc-btn.clear {
+            background: #ff0080;
+            color: #fff;
+            grid-column: span 2;
+        }
+        
+        /* Sections */
         section {
-            margin-bottom: 80px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 4px solid #00ffff;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 20px #00ffff;
         }
         
         .section-title {
-            font-size: 3em;
-            font-weight: 800;
-            margin-bottom: 50px;
-            text-align: center;
-            color: #1a1a1a;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        
-        /* About */
-        .about-content {
-            display: flex;
-            gap: 60px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .about-text h3 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            color: #667eea;
-        }
-        
-        .about-text p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            line-height: 1.8;
-            color: #555;
-        }
-        
-        .stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 30px;
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
             font-size: 2.5em;
-            font-weight: 800;
-            color: #667eea;
-        }
-        
-        .stat-label {
-            color: #999;
-            margin-top: 5px;
+            color: #ffff00;
+            text-shadow: 3px 3px 0px #ff00ff;
+            margin-bottom: 30px;
+            transform: skew(-5deg);
         }
         
         /* Skills Grid */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
         
         .skill-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 40px;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #00ffff, #00ff00);
+            border: 4px solid #ffff00;
+            padding: 20px;
+            border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: rotate(-3deg);
+            transition: all 0.3s;
+            box-shadow: 5px 5px 0px #ff00ff;
         }
         
         .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            transform: rotate(-3deg) scale(1.1) translateY(-10px);
+            box-shadow: 8px 8px 0px #ff00ff;
         }
         
         .skill-icon {
             font-size: 3em;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         .skill-card h3 {
+            color: #ff00ff;
             font-size: 1.3em;
             margin-bottom: 10px;
-            color: #667eea;
+            text-shadow: 2px 2px 0px #000;
         }
         
         .skill-card p {
-            color: #666;
-            font-size: 0.95em;
+            color: #000;
+            font-weight: bold;
         }
         
-        /* Projects */
+        /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
         
         .project-card {
-            background: white;
-            border: 2px solid #f0f0f0;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #ff00ff, #ff0080);
+            border: 4px solid #00ffff;
+            padding: 25px;
+            border-radius: 15px;
+            transform: rotate(2deg);
+            transition: all 0.3s;
+            box-shadow: 6px 6px 0px #00ff00;
         }
         
         .project-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
-            transform: translateY(-5px);
+            transform: rotate(2deg) scale(1.1) translateY(-10px);
+            box-shadow: 10px 10px 0px #00ff00;
         }
         
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
+        .project-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
         }
         
-        .project-content {
-            padding: 30px;
-        }
-        
-        .project-content h3 {
+        .project-card h3 {
+            color: #ffff00;
             font-size: 1.3em;
             margin-bottom: 10px;
-            color: #1a1a1a;
+            text-shadow: 2px 2px 0px #000;
         }
         
-        .project-content p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 0.95em;
+        .project-card p {
+            color: #fff;
+            font-weight: bold;
         }
         
-        .project-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background: #f0f0f0;
-            color: #667eea;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-        }
-        
-        /* Contact */
+        /* Contact Section */
         .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 12px;
+            background: linear-gradient(90deg, #00ff00, #00ffff);
+            border: 5px solid #ffff00;
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
+            box-shadow: 0 0 30px #00ff00;
         }
         
         .contact-section h2 {
+            color: #ff00ff;
             font-size: 2.5em;
+            text-shadow: 3px 3px 0px #000;
             margin-bottom: 20px;
         }
         
         .contact-section p {
-            font-size: 1.1em;
+            color: #000;
+            font-size: 1.2em;
+            font-weight: bold;
             margin-bottom: 30px;
-            opacity: 0.95;
         }
         
         .contact-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .contact-links a {
-            background: white;
-            color: #667eea;
-            padding: 12px 28px;
-            border-radius: 8px;
+            background: #ffff00;
+            color: #ff00ff;
+            padding: 12px 24px;
+            border: 3px solid #000;
             text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s ease;
+            font-weight: 900;
+            transform: skew(-15deg);
+            box-shadow: 4px 4px 0px #ff00ff;
+            transition: all 0.3s;
         }
         
         .contact-links a:hover {
-            transform: translateY(-2px);
+            background: #00ffff;
+            transform: skew(-15deg) scale(1.1);
+            box-shadow: 6px 6px 0px #ff00ff;
         }
         
         /* Footer */
         footer {
-            background: #1a1a1a;
-            color: white;
+            background: #000;
+            color: #00ff00;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 30px 20px;
+            border-top: 5px dashed #ffff00;
+            margin-top: 40px;
+            font-weight: bold;
+            text-shadow: 0 0 10px #00ff00;
         }
         
         footer p {
             margin-bottom: 10px;
         }
         
-        .footer-links {
-            margin-top: 20px;
-        }
-        
-        .footer-links a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
             nav {
-                padding: 15px 20px;
                 flex-direction: column;
                 gap: 15px;
             }
@@ -393,184 +433,192 @@
                 margin-left: 0;
             }
             
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            
-            .hero p {
-                font-size: 1.1em;
-            }
-            
-            .section-title {
-                font-size: 2em;
-            }
-            
-            .about-content {
-                gap: 30px;
-            }
-            
-            .stats {
-                flex-direction: column;
-                gap: 20px;
+            .calc-buttons {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
     </style>
 </head>
 <body>
+    <!-- Animated Stars Background -->
+    <div class="stars" id="starsContainer"></div>
+
     <!-- Navigation -->
     <nav>
-        <div class="logo">NP</div>
-        <div style="display: flex; gap: 30px;">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <div class="logo">💫 Y2K NADIA 💫</div>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <a href="#about">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm Nadia 👋</h1>
-            <p>Creative Developer & Digital Innovator</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
-                <a href="#projects" class="btn btn-secondary">View My Work</a>
-            </div>
+        <h1>WELCOME 2 MY PORTAL! 🌐</h1>
+        <p>✨ Y2K VIBES × WEB DEVELOPER ✨</p>
+        <div class="hero-buttons">
+            <button class="btn-y2k" onclick="document.getElementById('calculator-panel').scrollIntoView({behavior: 'smooth'})">USE CALC ➜</button>
+            <button class="btn-y2k alt" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">SEE PROJECTS</button>
         </div>
     </div>
 
     <!-- Main Content -->
     <main>
+        <!-- Calculator Panel -->
+        <div class="calculator-panel" id="calculator-panel">
+            <div class="calc-title">🧮 Y2K CALC 🧮</div>
+            <div class="calc-display" id="calcDisplay">0</div>
+            <div class="calc-buttons">
+                <button class="calc-btn clear" onclick="clearDisplay()">CLEAR</button>
+                <button class="calc-btn operator" onclick="appendToDisplay('/')">÷</button>
+                <button class="calc-btn operator" onclick="appendToDisplay('*')">×</button>
+                
+                <button class="calc-btn" onclick="appendToDisplay('7')">7</button>
+                <button class="calc-btn" onclick="appendToDisplay('8')">8</button>
+                <button class="calc-btn" onclick="appendToDisplay('9')">9</button>
+                <button class="calc-btn operator" onclick="appendToDisplay('-')">−</button>
+                
+                <button class="calc-btn" onclick="appendToDisplay('4')">4</button>
+                <button class="calc-btn" onclick="appendToDisplay('5')">5</button>
+                <button class="calc-btn" onclick="appendToDisplay('6')">6</button>
+                <button class="calc-btn operator" onclick="appendToDisplay('+')">+</button>
+                
+                <button class="calc-btn" onclick="appendToDisplay('1')">1</button>
+                <button class="calc-btn" onclick="appendToDisplay('2')">2</button>
+                <button class="calc-btn" onclick="appendToDisplay('3')">3</button>
+                <button class="calc-btn" onclick="appendToDisplay('.')">.</button>
+                
+                <button class="calc-btn" onclick="appendToDisplay('0')">0</button>
+                <button class="calc-btn equals" onclick="calculate()">=</button>
+            </div>
+        </div>
+
         <!-- About Section -->
         <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Crafting Digital Experiences</h3>
-                    <p>I'm a passionate web developer with expertise in building fast, scalable, and beautiful web applications. With a focus on modern technologies like AMP, React, and responsive design, I help businesses reach their audience with optimal performance.</p>
-                    <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge with the community.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Projects</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Commits</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">∞</div>
-                            <div class="stat-label">Learning</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title">⭐ ABOUT ME ⭐</h2>
+            <p style="font-size: 1.2em; color: #ffff00; text-shadow: 2px 2px 0px #ff00ff; font-weight: bold;">
+                HEY!! I'm NADIA 💝 a web developer with Y2K ENERGY! 
+                I build super fast websites using AMP & modern tech. My mission? 
+                Make the web FASTER, PRETTIER, and MORE FUN! 
+                Welcome 2 my digital playground! 🎮✨
+            </p>
         </section>
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2 class="section-title">Skills & Expertise</h2>
+            <h2 class="section-title">💻 SKILL DUMP 💻</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Frontend Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React, AMP Framework. Building responsive and interactive interfaces.</p>
-                </div>
-                <div class="skill-card">
                     <div class="skill-icon">⚡</div>
-                    <h3>Performance Optimization</h3>
-                    <p>Page speed optimization, Lighthouse audits, and implementing best practices for faster loading times.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>Mobile First Design</h3>
-                    <p>Creating beautiful, user-friendly experiences optimized for all devices and screen sizes.</p>
+                    <h3>AMP MASTER</h3>
+                    <p>Lightning fast web pages!</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>Modern design principles, color theory, and user experience best practices for engaging interfaces.</p>
+                    <h3>Y2K DESIGN</h3>
+                    <p>Maximum VIBES 2000s</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Web Tools & Frameworks</h3>
-                    <p>Git, GitHub, AMP, Progressive Web Apps, and modern development workflows.</p>
+                    <div class="skill-icon">📱</div>
+                    <h3>MOBILE FIRST</h3>
+                    <p>Responsive & DREAMY</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🚀</div>
-                    <h3>Problem Solving</h3>
-                    <p>Analytical thinking and creative solutions for complex technical challenges.</p>
+                    <div class="skill-icon">💡</div>
+                    <h3>HTML/CSS/JS</h3>
+                    <p>Web building TOOLS</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">🚀 MY PROJECTS 🚀</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">⚡</div>
-                    <div class="project-content">
-                        <h3>Belajar AMP</h3>
-                        <p>Learning and mastering the AMP framework for creating super-fast mobile web experiences.</p>
-                        <div class="project-tags">
-                            <span class="tag">AMP</span>
-                            <span class="tag">HTML5</span>
-                            <span class="tag">Performance</span>
-                        </div>
-                    </div>
+                    <div class="project-icon">⚡</div>
+                    <h3>BELAJAR AMP</h3>
+                    <p>Learning the SPEED of the future!</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🎨</div>
-                    <div class="project-content">
-                        <h3>Modern Landing Pages</h3>
-                        <p>Creating stunning, responsive landing pages with gradient designs and smooth interactions.</p>
-                        <div class="project-tags">
-                            <span class="tag">Design</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">Responsive</span>
-                        </div>
-                    </div>
+                    <div class="project-icon">🎨</div>
+                    <h3>Y2K PORTAL</h3>
+                    <p>This WEBSITE! So META!</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">💡</div>
-                    <div class="project-content">
-                        <h3>Web Experiments</h3>
-                        <p>Exploring cutting-edge web technologies and pushing the boundaries of what's possible online.</p>
-                        <div class="project-tags">
-                            <span class="tag">Innovation</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Exploration</span>
-                        </div>
-                    </div>
+                    <div class="project-icon">💫</div>
+                    <h3>WEB MAGIC</h3>
+                    <p>Making internet MORE AWESOME</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <div class="contact-section">
-                <h2>Let's Work Together 🚀</h2>
-                <p>Have a project in mind? I'd love to hear about it. Let's create something amazing together!</p>
-                <div class="contact-links">
-                    <a href="https://github.com/nadiapuspita137-del" target="_blank">GitHub</a>
-                    <a href="mailto:nadiapuspita@example.com">Email Me</a>
-                    <a href="https://twitter.com" target="_blank">Twitter</a>
-                </div>
+        <section id="contact" class="contact-section">
+            <h2>💌 LET'S CONNECT 💌</h2>
+            <p>Got ideas? Wanna collaborate? HIT ME UP!</p>
+            <div class="contact-links">
+                <a href="https://github.com/nadiapuspita137-del" target="_blank">GITHUB →</a>
+                <a href="mailto:nadiapuspita@example.com">EMAIL ME →</a>
+                <a href="https://twitter.com" target="_blank">TWITTER →</a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Nadia Puspita. All rights reserved.</p>
-        <p>Built with ❤️ using AMP & Modern Web Technologies</p>
-        <div class="footer-links">
-            <a href="https://github.com/nadiapuspita137-del" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <p>💿 © 2026 NADIA PUSPITA - Y2K FOREVER 💿</p>
+        <p>★ MADE WITH ❤️ & NOSTALGIA ★</p>
+        <p>✨ WELCOME 2 THE FUTURE (OF THE PAST) ✨</p>
     </footer>
+
+    <script>
+        // Calculator Functions
+        let display = document.getElementById('calcDisplay');
+        let currentValue = '0';
+        
+        function appendToDisplay(value) {
+            if (currentValue === '0' && value !== '.') {
+                currentValue = value;
+            } else if (value === '.' && currentValue.includes('.')) {
+                return;
+            } else {
+                currentValue += value;
+            }
+            display.textContent = currentValue;
+        }
+        
+        function clearDisplay() {
+            currentValue = '0';
+            display.textContent = '0';
+        }
+        
+        function calculate() {
+            try {
+                currentValue = eval(currentValue).toString();
+                display.textContent = currentValue;
+            } catch (e) {
+                display.textContent = 'ERROR!';
+                currentValue = '0';
+            }
+        }
+        
+        // Generate random stars
+        function generateStars() {
+            const container = document.getElementById('starsContainer');
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                container.appendChild(star);
+            }
+        }
+        
+        generateStars();
+    </script>
 </body>
 </html>
