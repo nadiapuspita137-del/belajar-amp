@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>Nadia Puspita - Landing Page</title>
+    <title>Nadia Puspita - Creative Developer</title>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
@@ -14,189 +14,563 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: #1a1a1a;
+            background: #ffffff;
         }
         
-        header {
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: 800;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 20px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        nav a {
+            margin-left: 40px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 600px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
         }
         
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: 700;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 800px;
+            height: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 1;
         }
         
-        header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.95;
-            margin-bottom: 20px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: #ff6b6b;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
             color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.3s ease;
-            border: none;
+            border: 2px solid white;
             cursor: pointer;
+            transition: all 0.3s ease;
             font-size: 1em;
         }
         
-        .cta-button:hover {
-            background-color: #ff5252;
+        .btn-primary {
+            background: white;
+            color: #667eea;
+            border-color: white;
         }
         
+        .btn-primary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
         main {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
         
         section {
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 3em;
+            font-weight: 800;
             margin-bottom: 50px;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            color: #1a1a1a;
         }
         
-        section h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            font-size: 2em;
-            border-bottom: 3px solid #ff6b6b;
-            padding-bottom: 10px;
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
         }
         
-        .features {
+        /* About */
+        .about-content {
             display: flex;
+            gap: 60px;
+            align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
         }
         
-        .feature-box {
+        .about-text {
             flex: 1;
-            min-width: 250px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-left: 4px solid #667eea;
-            border-radius: 5px;
+            min-width: 300px;
         }
         
-        .feature-box h3 {
+        .about-text h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
             color: #667eea;
+        }
+        
+        .about-text p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .skill-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.3em;
             margin-bottom: 10px;
+            color: #667eea;
         }
         
-        .contact-link {
-            display: inline-block;
-            margin-top: 15px;
+        .skill-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border: 2px solid #f0f0f0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+        
+        .project-content {
+            padding: 30px;
+        }
+        
+        .project-content h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .project-content p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .project-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: #f0f0f0;
             color: #667eea;
-            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
             font-weight: 600;
         }
         
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            background: white;
+            color: #667eea;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-links a:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
         footer {
-            background-color: #2c3e50;
+            background: #1a1a1a;
             color: white;
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
+            padding: 40px 20px;
+            margin-top: 60px;
         }
         
         footer p {
             margin-bottom: 10px;
         }
         
-        .social-links {
-            margin-top: 15px;
+        .footer-links {
+            margin-top: 20px;
         }
         
-        .social-links a {
+        .footer-links a {
             color: #667eea;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
             font-weight: 600;
         }
         
-        amp-img {
-            margin: 20px 0;
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav a {
+                margin-left: 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+            
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .about-content {
+                gap: 30px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Halo! 👋 Saya Nadia Puspita</h1>
-        <p class="subtitle">Web Developer & Tech Enthusiast</p>
-        <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Mari Berkenalan</button>
-    </header>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">NP</div>
+        <div style="display: flex; gap: 30px;">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Nadia 👋</h1>
+            <p>Creative Developer & Digital Innovator</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <main>
         <!-- About Section -->
         <section id="about">
-            <h2>📌 Tentang Saya</h2>
-            <p>Saya adalah seorang web developer yang passionate dalam menciptakan website yang cepat, responsif, dan user-friendly. Saat ini sedang belajar AMP (Accelerated Mobile Pages) untuk membuat web yang optimal di semua device.</p>
-            <p style="margin-top: 15px;">Dengan fokus pada <strong>performa</strong>, <strong>aksesibilitas</strong>, dan <strong>user experience</strong>, saya berusaha menciptakan solusi web yang terbaik.</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Crafting Digital Experiences</h3>
+                    <p>I'm a passionate web developer with expertise in building fast, scalable, and beautiful web applications. With a focus on modern technologies like AMP, React, and responsive design, I help businesses reach their audience with optimal performance.</p>
+                    <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge with the community.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Commits</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Learning</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills">
-            <h2>💻 Skill & Keahlian</h2>
-            <div class="features">
-                <div class="feature-box">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
                     <h3>Frontend Development</h3>
-                    <p>HTML5, CSS3, JavaScript, React, dan AMP</p>
+                    <p>HTML5, CSS3, JavaScript, React, AMP Framework. Building responsive and interactive interfaces.</p>
                 </div>
-                <div class="feature-box">
-                    <h3>Mobile Optimization</h3>
-                    <p>Responsive Design, AMP Framework, PWA</p>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Page speed optimization, Lighthouse audits, and implementing best practices for faster loading times.</p>
                 </div>
-                <div class="feature-box">
-                    <h3>Web Performance</h3>
-                    <p>Page Speed Optimization, Lighthouse Audit</p>
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>Mobile First Design</h3>
+                    <p>Creating beautiful, user-friendly experiences optimized for all devices and screen sizes.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Modern design principles, color theory, and user experience best practices for engaging interfaces.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Web Tools & Frameworks</h3>
+                    <p>Git, GitHub, AMP, Progressive Web Apps, and modern development workflows.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🚀</div>
+                    <h3>Problem Solving</h3>
+                    <p>Analytical thinking and creative solutions for complex technical challenges.</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>🚀 Project Highlights</h2>
-            <p>Beberapa project yang sedang saya kerjakan:</p>
-            <ul style="margin-left: 20px; margin-top: 15px;">
-                <li><strong>Belajar AMP:</strong> Eksplorasi framework AMP untuk performa mobile optimal</li>
-                <li><strong>Landing Page Modern:</strong> Design minimalis dengan Gradient & Smooth Interactions</li>
-                <li><strong>Tech Stack Exploration:</strong> Testing berbagai teknologi web terkini</li>
-            </ul>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">⚡</div>
+                    <div class="project-content">
+                        <h3>Belajar AMP</h3>
+                        <p>Learning and mastering the AMP framework for creating super-fast mobile web experiences.</p>
+                        <div class="project-tags">
+                            <span class="tag">AMP</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">🎨</div>
+                    <div class="project-content">
+                        <h3>Modern Landing Pages</h3>
+                        <p>Creating stunning, responsive landing pages with gradient designs and smooth interactions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">💡</div>
+                    <div class="project-content">
+                        <h3>Web Experiments</h3>
+                        <p>Exploring cutting-edge web technologies and pushing the boundaries of what's possible online.</p>
+                        <div class="project-tags">
+                            <span class="tag">Innovation</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Exploration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact">
-            <h2>💬 Hubungi Saya</h2>
-            <p>Tertarik untuk berkolaborasi atau hanya ingin ngobrol tentang tech? Silakan hubungi saya!</p>
-            <div class="social-links" style="margin-top: 20px;">
-                <a href="https://github.com/nadiapuspita137-del" target="_blank">GitHub</a>
-                <a href="mailto:nadiapuspita@example.com">Email</a>
-                <a href="https://twitter.com" target="_blank">Twitter</a>
+            <div class="contact-section">
+                <h2>Let's Work Together 🚀</h2>
+                <p>Have a project in mind? I'd love to hear about it. Let's create something amazing together!</p>
+                <div class="contact-links">
+                    <a href="https://github.com/nadiapuspita137-del" target="_blank">GitHub</a>
+                    <a href="mailto:nadiapuspita@example.com">Email Me</a>
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Nadia Puspita - All Rights Reserved</p>
-        <p>Made with ❤️ using AMP</p>
+        <p>&copy; 2026 Nadia Puspita. All rights reserved.</p>
+        <p>Built with ❤️ using AMP & Modern Web Technologies</p>
+        <div class="footer-links">
+            <a href="https://github.com/nadiapuspita137-del" target="_blank">GitHub</a>
+            <a href="#" target="_blank">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
     </footer>
 </body>
 </html>
