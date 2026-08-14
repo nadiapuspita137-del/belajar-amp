@@ -1,624 +1,265 @@
 <!doctype html>
-<html ⚡>
+<html amp lang="id">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>Nadia's Y2K Portal 💫</title>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Comic Sans MS', 'Arial Black', sans-serif;
-            line-height: 1.6;
-            color: #00ff00;
-            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff0080);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Animated Background */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-        
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
-        
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-        
-        /* Navigation */
-        nav {
-            background: linear-gradient(90deg, #ff00ff, #00ffff);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 4px solid #00ff00;
-            border-bottom: 8px dashed #ffff00;
-            box-shadow: 0 0 20px #ff00ff;
-        }
-        
-        .logo {
-            font-size: 2em;
-            font-weight: 900;
-            color: #ffff00;
-            text-shadow: 3px 3px 0px #ff00ff, 6px 6px 0px #00ffff;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        nav a {
-            margin-left: 30px;
-            text-decoration: none;
-            color: #000;
-            font-weight: 900;
-            font-size: 1em;
-            background: #ffff00;
-            padding: 8px 16px;
-            border: 2px solid #000;
-            transform: skew(-20deg);
-            transition: all 0.3s;
-            box-shadow: 4px 4px 0px #ff00ff;
-        }
-        
-        nav a:hover {
-            transform: skew(-20deg) scale(1.1);
-            background: #00ffff;
-            box-shadow: 6px 6px 0px #ff00ff;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            border: 4px solid #00ff00;
-            border-radius: 20px;
-            margin: 30px;
-            box-shadow: 0 0 30px #00ff00, inset 0 0 20px rgba(0, 255, 0, 0.2);
-        }
-        
-        .hero h1 {
-            font-size: 4em;
-            color: #ffff00;
-            text-shadow: 4px 4px 0px #ff00ff, 8px 8px 0px #00ffff;
-            margin-bottom: 20px;
-            animation: glitch 2s infinite;
-        }
-        
-        @keyframes glitch {
-            0%, 100% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-        }
-        
-        .hero p {
-            font-size: 1.5em;
-            color: #00ffff;
-            text-shadow: 2px 2px 0px #ff00ff;
-            margin-bottom: 30px;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn-y2k {
-            padding: 15px 30px;
-            font-size: 1.1em;
-            font-weight: 900;
-            font-family: 'Comic Sans MS', sans-serif;
-            border: 3px solid #000;
-            background: #ffff00;
-            color: #000;
-            transform: skew(-15deg) rotate(-2deg);
-            transition: all 0.3s;
-            box-shadow: 6px 6px 0px #ff00ff;
-            cursor: pointer;
-        }
-        
-        .btn-y2k:hover {
-            transform: skew(-15deg) rotate(-2deg) scale(1.15);
-            box-shadow: 10px 10px 0px #ff00ff;
-        }
-        
-        .btn-y2k.alt {
-            background: #00ffff;
-            box-shadow: 6px 6px 0px #ff00ff;
-        }
-        
-        /* Main Container */
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        /* Calculator Panel */
-        .calculator-panel {
-            background: linear-gradient(135deg, #ff00ff, #ff0080);
-            border: 5px solid #ffff00;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 0 30px #ff00ff, inset 0 0 20px rgba(0, 255, 0, 0.1);
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .calc-title {
-            color: #ffff00;
-            text-shadow: 2px 2px 0px #000;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .calc-display {
-            background: #000;
-            color: #00ff00;
-            border: 3px solid #00ff00;
-            padding: 15px;
-            font-size: 1.8em;
-            font-weight: bold;
-            text-align: right;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            font-family: 'Courier New', monospace;
-            text-shadow: 0 0 10px #00ff00;
-            min-height: 60px;
-            box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.3);
-        }
-        
-        .calc-buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        
-        .calc-btn {
-            background: #00ffff;
-            color: #000;
-            border: 3px solid #000;
-            padding: 15px;
-            font-size: 1.2em;
-            font-weight: 900;
-            cursor: pointer;
-            transform: skew(-10deg);
-            transition: all 0.2s;
-            box-shadow: 3px 3px 0px #ff00ff;
-            font-family: 'Comic Sans MS', sans-serif;
-        }
-        
-        .calc-btn:hover {
-            background: #ffff00;
-            transform: skew(-10deg) scale(1.1);
-            box-shadow: 5px 5px 0px #ff00ff;
-        }
-        
-        .calc-btn.operator {
-            background: #ffff00;
-            color: #ff00ff;
-        }
-        
-        .calc-btn.equals {
-            background: #00ff00;
-            color: #ff00ff;
-            grid-column: span 2;
-        }
-        
-        .calc-btn.clear {
-            background: #ff0080;
-            color: #fff;
-            grid-column: span 2;
-        }
-        
-        /* Sections */
-        section {
-            background: rgba(0, 0, 0, 0.4);
-            border: 4px solid #00ffff;
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            box-shadow: 0 0 20px #00ffff;
-        }
-        
-        .section-title {
-            font-size: 2.5em;
-            color: #ffff00;
-            text-shadow: 3px 3px 0px #ff00ff;
-            margin-bottom: 30px;
-            transform: skew(-5deg);
-        }
-        
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill-card {
-            background: linear-gradient(135deg, #00ffff, #00ff00);
-            border: 4px solid #ffff00;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            transform: rotate(-3deg);
-            transition: all 0.3s;
-            box-shadow: 5px 5px 0px #ff00ff;
-        }
-        
-        .skill-card:hover {
-            transform: rotate(-3deg) scale(1.1) translateY(-10px);
-            box-shadow: 8px 8px 0px #ff00ff;
-        }
-        
-        .skill-icon {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        
-        .skill-card h3 {
-            color: #ff00ff;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 0px #000;
-        }
-        
-        .skill-card p {
-            color: #000;
-            font-weight: bold;
-        }
-        
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .project-card {
-            background: linear-gradient(135deg, #ff00ff, #ff0080);
-            border: 4px solid #00ffff;
-            padding: 25px;
-            border-radius: 15px;
-            transform: rotate(2deg);
-            transition: all 0.3s;
-            box-shadow: 6px 6px 0px #00ff00;
-        }
-        
-        .project-card:hover {
-            transform: rotate(2deg) scale(1.1) translateY(-10px);
-            box-shadow: 10px 10px 0px #00ff00;
-        }
-        
-        .project-icon {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        
-        .project-card h3 {
-            color: #ffff00;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 0px #000;
-        }
-        
-        .project-card p {
-            color: #fff;
-            font-weight: bold;
-        }
-        
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(90deg, #00ff00, #00ffff);
-            border: 5px solid #ffff00;
-            padding: 40px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 0 30px #00ff00;
-        }
-        
-        .contact-section h2 {
-            color: #ff00ff;
-            font-size: 2.5em;
-            text-shadow: 3px 3px 0px #000;
-            margin-bottom: 20px;
-        }
-        
-        .contact-section p {
-            color: #000;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-        
-        .contact-links {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            background: #ffff00;
-            color: #ff00ff;
-            padding: 12px 24px;
-            border: 3px solid #000;
-            text-decoration: none;
-            font-weight: 900;
-            transform: skew(-15deg);
-            box-shadow: 4px 4px 0px #ff00ff;
-            transition: all 0.3s;
-        }
-        
-        .contact-links a:hover {
-            background: #00ffff;
-            transform: skew(-15deg) scale(1.1);
-            box-shadow: 6px 6px 0px #ff00ff;
-        }
-        
-        /* Footer */
-        footer {
-            background: #000;
-            color: #00ff00;
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 5px dashed #ffff00;
-            margin-top: 40px;
-            font-weight: bold;
-            text-shadow: 0 0 10px #00ff00;
-        }
-        
-        footer p {
-            margin-bottom: 10px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            
-            .section-title {
-                font-size: 1.8em;
-            }
-            
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            nav a {
-                margin-left: 0;
-            }
-            
-            .calc-buttons {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <title>Nadia's Y2K Portal | AMP Playground</title>
+  <meta name="description" content="Nadia's Y2K portfolio playground built with AMP, responsive design, and an AMP-compatible calculator.">
+  <meta name="theme-color" content="#09001f">
+  <link rel="canonical" href="https://nadiapuspita137-del.github.io/belajar-amp/">
+  <meta name="amp-script-src" content="sha384-F_hGY5HDXTsmy3j0EcMfJ01ye5W6OyqOH7iImdi1WlvjCnIiZ9aM7EUYMtJvPYbK">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+  <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Arial Black','Trebuchet MS',sans-serif;line-height:1.6;color:#fff;background:#09001f;background-image:radial-gradient(circle at 15% 10%,rgba(255,0,255,.34),transparent 28%),radial-gradient(circle at 85% 20%,rgba(0,255,255,.28),transparent 25%),radial-gradient(circle at 50% 85%,rgba(255,0,128,.3),transparent 32%);min-height:100vh;overflow-x:hidden}
+    a{color:inherit}
+    .page-shell{width:min(1180px,100%);margin:0 auto;padding:0 18px}
+    .topbar{position:relative;margin:18px auto 0;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:rgba(12,0,38,.94);border:2px solid #00ffff;border-radius:16px;box-shadow:0 0 22px rgba(0,255,255,.28)}
+    .logo{color:#ffff00;font-size:clamp(1.15rem,3vw,1.8rem);font-weight:900;letter-spacing:.08em;text-shadow:3px 3px 0 #ff00ff}
+    .logo-motion{animation:logoBounce 2.6s ease-in-out infinite}
+    .nav-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{display:inline-block;padding:8px 12px;background:#ffff00;color:#080014;text-decoration:none;font-size:.78rem;border:2px solid #000;box-shadow:3px 3px 0 #ff00ff;transform:skew(-7deg)}
+    .nav-links a:hover{background:#00ffff}
+    .hero{position:relative;margin:24px 0;padding:clamp(32px,7vw,72px) clamp(20px,5vw,56px);text-align:center;background:linear-gradient(145deg,rgba(255,0,255,.25),rgba(0,255,255,.12));border:3px solid #00ff66;border-radius:24px;box-shadow:0 0 32px rgba(0,255,102,.25),inset 0 0 28px rgba(255,0,255,.1);overflow:hidden}
+    .hero::before{content:'✦ ✧ ✦ ✧ ✦';position:absolute;top:12px;left:0;right:0;color:#00ffff;letter-spacing:22px;opacity:.7}
+    .eyebrow{display:inline-block;margin-bottom:14px;padding:6px 12px;border:2px solid #ffff00;background:#ff00aa;color:#fff;font-size:.78rem;letter-spacing:.12em}
+    .hero h1{font-size:clamp(2.3rem,8vw,5rem);line-height:1;color:#ffff00;text-shadow:5px 5px 0 #ff00ff,10px 10px 0 #00ffff;letter-spacing:.03em}
+    .glitch-motion{animation:glitch 2.8s steps(1,end) infinite}
+    .hero p{max-width:760px;margin:24px auto;color:#b9ffff;font-size:clamp(1rem,2.4vw,1.35rem);font-family:'Trebuchet MS',sans-serif;font-weight:700}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .hero-btn{display:inline-block;padding:13px 20px;background:#ffff00;color:#080014;text-decoration:none;border:3px solid #000;box-shadow:5px 5px 0 #ff00ff;font-weight:900;transform:skew(-8deg)}
+    .hero-btn.alt{background:#00ffff;box-shadow:5px 5px 0 #00ff66}
+    .section{margin:24px 0;padding:clamp(22px,4vw,40px);background:rgba(10,0,30,.9);border:2px solid #ff00ff;border-radius:22px;box-shadow:0 0 24px rgba(255,0,255,.2)}
+    .section-title{margin-bottom:22px;color:#ffff00;font-size:clamp(1.55rem,4vw,2.4rem);line-height:1.15;text-shadow:3px 3px 0 #ff00ff}
+    .section-copy{color:#d7ffff;font-family:'Trebuchet MS',sans-serif;font-size:1.05rem}
+    .section-copy strong{color:#00ffff}
+    .calculator-panel{max-width:430px;margin:0 auto;padding:24px;background:linear-gradient(145deg,#72005f,#21004f);border:3px solid #ffff00;border-radius:20px;box-shadow:0 0 28px rgba(255,0,255,.35)}
+    .calc-title{text-align:center;color:#ffff00;font-size:1.45rem;margin-bottom:16px;text-shadow:2px 2px 0 #000}
+    .calc-display{min-height:64px;padding:14px 16px;margin-bottom:14px;display:flex;align-items:center;justify-content:flex-end;overflow:hidden;background:#020205;color:#00ff66;border:3px solid #00ff66;border-radius:12px;font:700 1.8rem 'Courier New',monospace;text-shadow:0 0 10px #00ff66;word-break:break-all}
+    .calc-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+    .calc-btn{min-height:56px;border:2px solid #000;background:#00ffff;color:#050010;font:900 1.05rem 'Trebuchet MS',sans-serif;box-shadow:3px 3px 0 #ff00ff;cursor:pointer}
+    .calc-btn:hover{background:#ffff00;transform:translateY(-2px)}
+    .calc-btn.operator{background:#ffff00;color:#ff00aa}
+    .calc-btn.clear{grid-column:span 2;background:#ff0080;color:#fff}
+    .calc-btn.equals{grid-column:span 2;background:#00ff66;color:#09001f}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .card{padding:22px;border:2px solid #00ffff;border-radius:16px;background:linear-gradient(145deg,rgba(0,255,255,.14),rgba(0,255,102,.08));box-shadow:4px 4px 0 rgba(255,0,255,.7)}
+    .card-icon{font-size:2.3rem;margin-bottom:8px}
+    .card h3{color:#ffff00;margin-bottom:8px;font-size:1rem;text-shadow:2px 2px 0 #ff00ff}
+    .card p{color:#d7ffff;font:600 .95rem 'Trebuchet MS',sans-serif}
+    .project-card{background:linear-gradient(145deg,rgba(255,0,170,.2),rgba(0,255,255,.08))}
+    .contact{border-color:#ffff00;background:linear-gradient(145deg,rgba(0,255,102,.16),rgba(0,255,255,.1));text-align:center}
+    .contact h2{color:#ff5bd7;text-shadow:3px 3px 0 #000}
+    .contact p{margin-bottom:18px;color:#eaffff;font-family:'Trebuchet MS',sans-serif}
+    .contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .contact-links a{display:inline-block;padding:11px 16px;background:#ffff00;color:#080014;text-decoration:none;border:2px solid #000;box-shadow:4px 4px 0 #ff00ff;font-weight:900}
+    footer{margin:24px 0 18px;padding:24px;text-align:center;border-top:2px dashed #00ffff;color:#8fffff;font:700 .85rem 'Trebuchet MS',sans-serif}
+    footer p+p{margin-top:6px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @keyframes logoBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+    @keyframes glitch{0%,100%{transform:translate(0)}20%{transform:translate(-2px,1px)}40%{transform:translate(2px,-1px)}60%{transform:translate(-1px,-2px)}80%{transform:translate(1px,2px)}}
+    @media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.topbar{align-items:flex-start}.nav-links{justify-content:flex-start}}
+    @media (max-width:560px){.page-shell{padding:0 10px}.topbar{margin-top:10px;padding:12px}.nav-links{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}.nav-links a{text-align:center;font-size:.7rem;padding:8px 5px}.hero{margin:14px 0;padding:34px 16px}.hero h1{font-size:clamp(2.1rem,14vw,3.4rem);text-shadow:3px 3px 0 #ff00ff,6px 6px 0 #00ffff}.section{padding:20px 14px;margin:14px 0}.grid{grid-template-columns:1fr}.calculator-panel{padding:16px}.calc-btn{min-height:52px}.calc-display{font-size:1.45rem}}
+  </style>
 </head>
 <body>
-    <!-- Animated Stars Background -->
-    <div class="stars" id="starsContainer"></div>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="logo logo-motion">💫 Y2K NADIA 💫</div>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+      </nav>
+    </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">💫 Y2K NADIA 💫</div>
-        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-            <a href="#about">ABOUT</a>
-            <a href="#skills">SKILLS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>WELCOME 2 MY PORTAL! 🌐</h1>
-        <p>✨ Y2K VIBES × WEB DEVELOPER ✨</p>
-        <div class="hero-buttons">
-            <button class="btn-y2k" onclick="document.getElementById('calculator-panel').scrollIntoView({behavior: 'smooth'})">USE CALC ➜</button>
-            <button class="btn-y2k alt" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">SEE PROJECTS</button>
-        </div>
-    </div>
-
-    <!-- Main Content -->
     <main>
-        <!-- Calculator Panel -->
-        <div class="calculator-panel" id="calculator-panel">
-            <div class="calc-title">🧮 Y2K CALC 🧮</div>
-            <div class="calc-display" id="calcDisplay">0</div>
-            <div class="calc-buttons">
-                <button class="calc-btn clear" onclick="clearDisplay()">CLEAR</button>
-                <button class="calc-btn operator" onclick="appendToDisplay('/')">÷</button>
-                <button class="calc-btn operator" onclick="appendToDisplay('*')">×</button>
-                
-                <button class="calc-btn" onclick="appendToDisplay('7')">7</button>
-                <button class="calc-btn" onclick="appendToDisplay('8')">8</button>
-                <button class="calc-btn" onclick="appendToDisplay('9')">9</button>
-                <button class="calc-btn operator" onclick="appendToDisplay('-')">−</button>
-                
-                <button class="calc-btn" onclick="appendToDisplay('4')">4</button>
-                <button class="calc-btn" onclick="appendToDisplay('5')">5</button>
-                <button class="calc-btn" onclick="appendToDisplay('6')">6</button>
-                <button class="calc-btn operator" onclick="appendToDisplay('+')">+</button>
-                
-                <button class="calc-btn" onclick="appendToDisplay('1')">1</button>
-                <button class="calc-btn" onclick="appendToDisplay('2')">2</button>
-                <button class="calc-btn" onclick="appendToDisplay('3')">3</button>
-                <button class="calc-btn" onclick="appendToDisplay('.')">.</button>
-                
-                <button class="calc-btn" onclick="appendToDisplay('0')">0</button>
-                <button class="calc-btn equals" onclick="calculate()">=</button>
-            </div>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="eyebrow">★ AMP PLAYGROUND / 2000s MODE ★</div>
+        <h1 id="hero-title" class="glitch-motion">HELLO, INTERNET! ✨</h1>
+        <p>Welcome 2 Nadia's digital playground. A deliberately loud Y2K interface, rebuilt to be responsive, cleaner, and actually compatible with AMP.</p>
+        <div class="hero-actions">
+          <a class="hero-btn" href="#calculator">TRY THE CALC →</a>
+          <a class="hero-btn alt" href="#projects">SEE PROJECTS →</a>
         </div>
+      </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2 class="section-title">⭐ ABOUT ME ⭐</h2>
-            <p style="font-size: 1.2em; color: #ffff00; text-shadow: 2px 2px 0px #ff00ff; font-weight: bold;">
-                HEY!! I'm NADIA 💝 a web developer with Y2K ENERGY! 
-                I build super fast websites using AMP & modern tech. My mission? 
-                Make the web FASTER, PRETTIER, and MORE FUN! 
-                Welcome 2 my digital playground! 🎮✨
-            </p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2 class="section-title">💻 SKILL DUMP 💻</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">⚡</div>
-                    <h3>AMP MASTER</h3>
-                    <p>Lightning fast web pages!</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Y2K DESIGN</h3>
-                    <p>Maximum VIBES 2000s</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>MOBILE FIRST</h3>
-                    <p>Responsive & DREAMY</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">💡</div>
-                    <h3>HTML/CSS/JS</h3>
-                    <p>Web building TOOLS</p>
-                </div>
+      <section id="calculator" class="section" aria-labelledby="calculator-title">
+        <h2 id="calculator-title" class="section-title">🧮 Y2K CALC 🧮</h2>
+        <amp-script layout="container" script="calc-script">
+          <div class="calculator-panel">
+            <div class="calc-title">RETRO POCKET CALCULATOR</div>
+            <div id="calcDisplay" class="calc-display" aria-live="polite">0</div>
+            <div class="calc-buttons">
+              <button id="calcClear" class="calc-btn clear" type="button">CLEAR</button>
+              <button class="calc-btn operator" type="button" data-value="/">÷</button>
+              <button class="calc-btn operator" type="button" data-value="*">×</button>
+              <button class="calc-btn" type="button" data-value="7">7</button>
+              <button class="calc-btn" type="button" data-value="8">8</button>
+              <button class="calc-btn" type="button" data-value="9">9</button>
+              <button class="calc-btn operator" type="button" data-value="-">−</button>
+              <button class="calc-btn" type="button" data-value="4">4</button>
+              <button class="calc-btn" type="button" data-value="5">5</button>
+              <button class="calc-btn" type="button" data-value="6">6</button>
+              <button class="calc-btn operator" type="button" data-value="+">+</button>
+              <button class="calc-btn" type="button" data-value="1">1</button>
+              <button class="calc-btn" type="button" data-value="2">2</button>
+              <button class="calc-btn" type="button" data-value="3">3</button>
+              <button id="calcEquals" class="calc-btn equals" type="button">=</button>
+              <button class="calc-btn" type="button" data-value="0">0</button>
+              <button class="calc-btn" type="button" data-value=".">.</button>
             </div>
-        </section>
+          </div>
+        </amp-script>
+      </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2 class="section-title">🚀 MY PROJECTS 🚀</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">⚡</div>
-                    <h3>BELAJAR AMP</h3>
-                    <p>Learning the SPEED of the future!</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">🎨</div>
-                    <h3>Y2K PORTAL</h3>
-                    <p>This WEBSITE! So META!</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">💫</div>
-                    <h3>WEB MAGIC</h3>
-                    <p>Making internet MORE AWESOME</p>
-                </div>
-            </div>
-        </section>
+      <section id="about" class="section" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title">⭐ ABOUT ME ⭐</h2>
+        <p class="section-copy">HEY!! I'm <strong>NADIA</strong> 💝, a web developer with Y2K ENERGY. This playground explores how a nostalgic visual style can coexist with responsive layout, accessible structure, and AMP's performance rules. The point is simple: make the web <strong>FASTER, PRETTIER, and MORE FUN!</strong></p>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2>💌 LET'S CONNECT 💌</h2>
-            <p>Got ideas? Wanna collaborate? HIT ME UP!</p>
-            <div class="contact-links">
-                <a href="https://github.com/nadiapuspita137-del" target="_blank">GITHUB →</a>
-                <a href="mailto:nadiapuspita@example.com">EMAIL ME →</a>
-                <a href="https://twitter.com" target="_blank">TWITTER →</a>
-            </div>
-        </section>
+      <section id="skills" class="section" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-title">💻 SKILL DUMP 💻</h2>
+        <div class="grid">
+          <article class="card"><div class="card-icon">⚡</div><h3>AMP MASTER</h3><p>Lightning fast web pages with AMP-friendly patterns.</p></article>
+          <article class="card"><div class="card-icon">🎨</div><h3>Y2K DESIGN</h3><p>Maximum 2000s vibes without sacrificing readability.</p></article>
+          <article class="card"><div class="card-icon">📱</div><h3>MOBILE FIRST</h3><p>Responsive layouts designed for tiny screens first.</p></article>
+          <article class="card"><div class="card-icon">💡</div><h3>HTML / CSS / JS</h3><p>The basic web-building toolkit, used with fewer questionable shortcuts.</p></article>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">🚀 MY PROJECTS 🚀</h2>
+        <div class="grid">
+          <article class="card project-card"><div class="card-icon">⚡</div><h3>BELAJAR AMP</h3><p>Learning the SPEED of the future.</p></article>
+          <article class="card project-card"><div class="card-icon">🎨</div><h3>Y2K PORTAL</h3><p>This website. So meta.</p></article>
+          <article class="card project-card"><div class="card-icon">💫</div><h3>WEB MAGIC</h3><p>Making the internet a little more awesome.</p></article>
+          <article class="card project-card"><div class="card-icon">🛠️</div><h3>AMP LAB</h3><p>Testing components, layout, and interaction without breaking validation.</p></article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title">💌 LET'S CONNECT 💌</h2>
+        <p>Got ideas? Wanna collaborate? The internet still has room for weird little experiments.</p>
+        <div class="contact-links">
+          <a href="https://github.com/nadiapuspita137-del" target="_blank" rel="noopener">GITHUB →</a>
+          <a href="mailto:nadiapuspita@example.com">EMAIL ME →</a>
+        </div>
+      </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>💿 © 2026 NADIA PUSPITA - Y2K FOREVER 💿</p>
-        <p>★ MADE WITH ❤️ & NOSTALGIA ★</p>
-        <p>✨ WELCOME 2 THE FUTURE (OF THE PAST) ✨</p>
+      <p>💿 © 2026 NADIA PUSPITA - Y2K FOREVER 💿</p>
+      <p>★ MADE WITH ❤️ &amp; NOSTALGIA ★</p>
+      <p>✨ WELCOME 2 THE FUTURE (OF THE PAST) ✨</p>
     </footer>
+  </div>
 
-    <script>
-        // Calculator Functions
-        let display = document.getElementById('calcDisplay');
-        let currentValue = '0';
-        
-        function appendToDisplay(value) {
-            if (currentValue === '0' && value !== '.') {
-                currentValue = value;
-            } else if (value === '.' && currentValue.includes('.')) {
-                return;
-            } else {
-                currentValue += value;
-            }
-            display.textContent = currentValue;
-        }
-        
-        function clearDisplay() {
-            currentValue = '0';
-            display.textContent = '0';
-        }
-        
-        function calculate() {
-            try {
-                currentValue = eval(currentValue).toString();
-                display.textContent = currentValue;
-            } catch (e) {
-                display.textContent = 'ERROR!';
-                currentValue = '0';
-            }
-        }
-        
-        // Generate random stars
-        function generateStars() {
-            const container = document.getElementById('starsContainer');
-            for (let i = 0; i < 50; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                container.appendChild(star);
-            }
-        }
-        
-        generateStars();
-    </script>
+  <script id="calc-script" type="text/plain" target="amp-script">const display = document.getElementById('calcDisplay');
+let currentValue = '0';
+
+function render() {
+  display.textContent = currentValue;
+}
+
+function appendValue(value) {
+  const operators = '+-*/';
+  const last = currentValue.slice(-1);
+
+  if (operators.includes(value)) {
+    if (currentValue === '0') {
+      if (value !== '-') return;
+    }
+    if (operators.includes(last)) {
+      currentValue = currentValue.slice(0, -1) + value;
+    } else {
+      currentValue += value;
+    }
+    render();
+    return;
+  }
+
+  if (value === '.') {
+    const parts = currentValue.split(/[+\-*/]/);
+    if (parts[parts.length - 1].includes('.')) return;
+  }
+
+  if (currentValue === '0' && /\d/.test(value)) {
+    currentValue = value;
+  } else if (currentValue === '-0' && /\d/.test(value)) {
+    currentValue = '-' + value;
+  } else {
+    currentValue += value;
+  }
+  render();
+}
+
+function clearCalculator() {
+  currentValue = '0';
+  render();
+}
+
+function calculate() {
+  try {
+    const tokens = currentValue.match(/\d+(?:\.\d+)?|[+\-*/()]|\.\d+/g);
+    if (!tokens || tokens.join('') !== currentValue) throw new Error('Invalid');
+    let index = 0;
+
+    function expression() {
+      let value = term();
+      while (tokens[index] === '+' || tokens[index] === '-') {
+        const op = tokens[index++];
+        const right = term();
+        value = op === '+' ? value + right : value - right;
+      }
+      return value;
+    }
+
+    function term() {
+      let value = factor();
+      while (tokens[index] === '*' || tokens[index] === '/') {
+        const op = tokens[index++];
+        const right = factor();
+        if (op === '/' && right === 0) throw new Error('Divide by zero');
+        value = op === '*' ? value * right : value / right;
+      }
+      return value;
+    }
+
+    function factor() {
+      if (tokens[index] === '-') {
+        index++;
+        return -factor();
+      }
+      if (tokens[index] === '(') {
+        index++;
+        const value = expression();
+        if (tokens[index++] !== ')') throw new Error('Invalid');
+        return value;
+      }
+      const token = tokens[index++];
+      const value = Number(token);
+      if (!Number.isFinite(value)) throw new Error('Invalid');
+      return value;
+    }
+
+    const result = expression();
+    if (index !== tokens.length || !Number.isFinite(result)) throw new Error('Invalid');
+    currentValue = String(Number(result.toFixed(10)));
+  } catch (error) {
+    currentValue = 'ERROR';
+  }
+  render();
+}
+
+document.querySelectorAll('[data-value]').forEach((button) => {
+  button.addEventListener('click', () => appendValue(button.getAttribute('data-value')));
+});
+document.getElementById('calcClear').addEventListener('click', clearCalculator);
+document.getElementById('calcEquals').addEventListener('click', calculate);</script>
 </body>
 </html>
